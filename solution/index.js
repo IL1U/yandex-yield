@@ -1,6 +1,10 @@
 module.exports = class {
     body;
     size;
+    [Symbol.toStringTag] = '^_^';
+    valueOf() {
+        return this;
+    };
     [Symbol.iterator] () {
         const self = this;                
         let current = 0;        
@@ -55,4 +59,8 @@ module.exports = class {
     has(item){
         return this.body.includes(item);
     }
+    forEach(callback, data){
+        const cl = callback.bind(data);
+        this.body.map(el => cl(el));
+    };
 }
