@@ -63,4 +63,17 @@ module.exports = class {
         const cl = callback.bind(data);
         this.body.map(el => cl(el));
     };
+    keys () {
+        return [...this];       
+    };
+    values () {
+        return [...this];       
+    };
+    entries () {
+        let result = [];        
+        for (let item of this) {
+            result.push([item, item]);
+        }         
+        return result;
+    }
 }
