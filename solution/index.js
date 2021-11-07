@@ -31,15 +31,6 @@ module.exports = class {
                 this.add(theArgs[i]);
             }
         } 
-    }    
-    keys () {
-        return this.body;
-    }
-    values(){
-        return this.body;
-    }
-    entries() {               
-        return this.body.map(el => el = [el, el])    
     }
 
     clear(){
