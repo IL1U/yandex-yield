@@ -65,11 +65,8 @@ module.exports = class {
         }       
     };
     * entries () {
-        for (const item of this.body) {
-            let result = [];
-            result.push(item);
-            result.push(item);
-            yield result; // [4,4] [8,8] ...
+        for (const item of this.body) {            
+            yield [item,item]; // [4,4] [8,8] ...
         }
     }
 }
