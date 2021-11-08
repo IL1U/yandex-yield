@@ -66,7 +66,7 @@ module.exports = class {
     };
     * entries () {
         for (const item of this.body) {            
-            yield [item,item]; // [4,4] [8,8] ...
+            yield [this.keys,this.values]; // [4,4] [8,8] ...
         }
     }
 }
