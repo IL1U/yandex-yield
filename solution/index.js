@@ -55,18 +55,21 @@ module.exports = class {
         this.body.map(el => cl(el));
     };
     * keys () {
-        for (const item of this.body) {
-            yield item; // 4 8 15 16 23 42
+        let i = 0;
+        for (const item of this.body) {            
+            yield i++;
         }         
     };
     * values () {
         for (const item of this.body) {
-            yield item; // 4 8 15 16 23 42
+            yield item;
         }       
     };
     * entries () {
-        for (const item of this.body) {            
-            yield [this.keys,this.values]; // [4,4] [8,8] ...
+        let i = 0;
+        for (const item of this.body) {
+            let result = [i++,item];
+            yield result;            
         }
     }
 }
